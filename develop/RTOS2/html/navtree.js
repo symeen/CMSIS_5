@@ -10,12 +10,11 @@ var NAVTREE =
       [ "Using a CMSIS-RTOS2 Implementation", "genRTOS2IF.html#usingOS2", null ]
     ] ],
     [ "Function Overview", "functionOverview.html", "functionOverview" ],
-    [ "RTOS Validation", "rtosValidation.html", [
-      [ "Sample Test Output", "rtosValidation.html#test_output", null ]
-    ] ],
+    [ "RTOS Validation", "rtosValidation.html", null ],
     [ "Migration from API v1 to API v2", "os2Migration.html", "os2Migration" ],
     [ "RTX v5 Implementation", "rtx5_impl.html", "rtx5_impl" ],
     [ "Coding Rules", "CodingRules.html", null ],
+    [ "Deprecated List", "deprecated.html", null ],
     [ "Reference", "modules.html", "modules" ],
     [ "Data Structures", "annotated.html", "annotated" ],
     [ "Data Structure Index", "classes.html", null ],
@@ -29,9 +28,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "CodingRules.html",
-"group__CMSIS__RTOS__ThreadMgmt.html#gad4e3e0971b41f2d17584a8c6837342ec",
-"group__rtx__evr__timer.html#gaccd59c7ae2351e0a1bf96cdb749c049f",
-"rtx__os_8h.html#aaf8577e5ddcbff356a1d27310baa8a1f"
+"group__CMSIS__RTOS__ThreadMgmt.html#ga5606604d56e21ece1a654664be877439",
+"group__rtx__evr__thread.html#ga6abe7d167bd5bb91c3d6bf6d2bb417aa",
+"rtx__os_8h.html#a8afd5feb676df99867375957b0587451"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

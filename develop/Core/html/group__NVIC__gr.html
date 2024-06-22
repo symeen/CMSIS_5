@@ -33,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-Core (Cortex-M)
-   &#160;<span id="projectnumber">Version 5.4.0</span>
+   &#160;<span id="projectnumber">Version 5.7.0</span>
    </div>
    <div id="projectbrief">CMSIS-Core support for Cortex-M processor-based devices</div>
   </td>
@@ -330,7 +330,7 @@ Mainline </th><th>Description  </th></tr>
  </td><td><div class="image">
 <img src="check.png"  alt="available"/>
 </div>
- </td><td>SV Call Interrupt   </td></tr>
+ </td><td>SVC Interrupt   </td></tr>
 <tr>
 <td><b>DebugMonitor_IRQn</b> </td><td>DebugMon_Handler </td><td>-4 </td><td>&#160; </td><td><div class="image">
 <img src="check.png"  alt="available"/>
@@ -398,7 +398,7 @@ Mainline </th><th>Description  </th></tr>
 <div class="line">                DCD     0                         ; Reserved</div>
 <div class="line">                DCD     0                         ; Reserved</div>
 <div class="line">                DCD     0                         ; Reserved</div>
-<div class="line">                DCD     SVC_Handler               ; SVCall Handler</div>
+<div class="line">                DCD     SVC_Handler               ; SVC Handler</div>
 <div class="line">                DCD     DebugMon_Handler          ; Debug Monitor Handler</div>
 <div class="line">                DCD     0                         ; Reserved</div>
 <div class="line">                DCD     PendSV_Handler            ; PendSV Handler</div>
@@ -462,8 +462,8 @@ Mainline </th><th>Description  </th></tr>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">void</span> TIMER0_IRQHandler(<span class="keywordtype">void</span>)  {                             <span class="comment">/* Timer 0 interrupt handler  */</span></div>
 <div class="line"> </div>
-<div class="line">  <span class="keywordflow">if</span> (LPC_TIM0-&gt;IR &amp; (1 &lt;&lt; 0))  {                           <span class="comment">/* Check if interrupt for match channel 0 occured */</span> </div>
-<div class="line">    LPC_TIM0-&gt;IR |= (1 &lt;&lt; 0);                               <span class="comment">/* Acknowledge interrupt for match channel 0 occured */</span></div>
+<div class="line">  <span class="keywordflow">if</span> (LPC_TIM0-&gt;IR &amp; (1 &lt;&lt; 0))  {                           <span class="comment">/* Check if interrupt for match channel 0 occurred */</span> </div>
+<div class="line">    LPC_TIM0-&gt;IR |= (1 &lt;&lt; 0);                               <span class="comment">/* Acknowledge interrupt for match channel 0 occurred */</span></div>
 <div class="line">  }</div>
 <div class="line">  active = <a class="code" href="group__NVIC__gr.html#gadf4252e600661fd762cfc0d1a9f5b892">NVIC_GetActive</a>(TIMER0_IRQn);                     <span class="comment">/* Get interrupt active state of timer 0 */</span></div>
 <div class="line">}</div>
@@ -590,7 +590,7 @@ Mainline </th><th>Description  </th></tr>
 <p>Exception 7: Secure Fault Interrupt [only on Armv8-M]. </p>
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="gga7e1129cd8a196f4284d41db3e82ad5c8a4ce820b3cc6cf3a796b41aadc0cf1237"></a>SVCall_IRQn</em>&#160;</td><td class="fielddoc">
-<p>Exception 11: SV Call Interrupt. </p>
+<p>Exception 11: SVC Interrupt. </p>
 </td></tr>
 <tr><td class="fieldname"><em><a class="anchor" id="gga7e1129cd8a196f4284d41db3e82ad5c8a8e033fcef7aed98a31c60a7de206722c"></a>DebugMonitor_IRQn</em>&#160;</td><td class="fielddoc">
 <p>Exception 12: Debug Monitor Interrupt [not on Cortex-M0 variants]. </p>
@@ -906,7 +906,7 @@ Mainline </th><th>Description  </th></tr>
 <li>not for Cortex-M0, Cortex-M0+, or SC000.</li>
 <li>IRQn must not be negative.</li>
 <li>Each external interrupt has an active status bit. When the processor starts the interrupt handler the bit is set to 1 and cleared when the interrupt return is executed.</li>
-<li>When an ISR is preempted and the processor executes anohter interrupt handler, the previous interrupt is still defined as active.</li>
+<li>When an ISR is preempted and the processor executes another interrupt handler, the previous interrupt is still defined as active.</li>
 </ul>
 </dd></dl>
 <dl class="section see"><dt>See Also</dt><dd><ul>
@@ -1217,7 +1217,7 @@ Mainline </th><th>Description  </th></tr>
 <li><b>For Cortex-M3, Cortex-M4, and Cortex-M7</b>:<ul>
 <li>Dynamic switching of interrupt priority levels is supported.</li>
 <li>Supports 0 to 255 priority levels.</li>
-<li>Priority-level registers have a maximum width of 8 bits and a minumum of 3 bits. Each register can be further devided into preempt priority level and subpriority level.</li>
+<li>Priority-level registers have a maximum width of 8 bits and a minimum of 3 bits. Each register can be further divided into preempt priority level and subpriority level.</li>
 </ul>
 </li>
 </ul>

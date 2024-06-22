@@ -1,35 +1,12 @@
 var NAVTREE =
 [
-  [ "CMSIS-DSP", "index.html", [
-    [ "CMSIS DSP Software Library", "index.html", [
-      [ "Introduction", "index.html#intro", null ],
-      [ "Using the Library", "index.html#using", null ],
-      [ "Examples", "index.html#example", null ],
-      [ "Toolchain Support", "index.html#toolchain", null ],
-      [ "Building the Library", "index.html#building", null ],
-      [ "Preprocessor Macros", "index.html#preprocessor", null ],
-      [ "CMSIS-DSP in ARM::CMSIS Pack", "index.html#pack", null ],
-      [ "Revision History of CMSIS-DSP", "index.html#rev", null ]
-    ] ],
-    [ "Revision History of CMSIS-DSP", "ChangeLog_pg.html", null ],
-    [ "Deprecated List", "deprecated.html", null ],
-    [ "Reference", "modules.html", "modules" ],
-    [ "Data Structures", "annotated.html", "annotated" ],
-    [ "Data Fields", "functions.html", [
-      [ "All", "functions.html", "functions_dup" ],
-      [ "Variables", "functions_vars.html", "functions_vars" ]
-    ] ]
-  ] ]
+  [ "CMSIS-DSP", "index.html"]
+
 ];
 
 var NAVTREEINDEX =
 [
-"ChangeLog_pg.html",
-"group__ComplexFFT.html#ga6321f703ec87a274aedaab33d3e766b4",
-"group__MatrixVectMult.html#gad31a43da83affa509393cfab4c1248b8",
-"group__weightedsum.html",
-"structarm__fir__lattice__instance__q15.html",
-"structarm__svm__rbf__instance__f16.html#a2d1be16c16d99cbba003a47ee2a3234f"
+"index.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

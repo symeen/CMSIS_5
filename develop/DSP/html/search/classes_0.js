@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['any32x2_5ft',['any32x2_t',['../unionany32x2__t.html',1,'']]],
+  ['any32x4_5ft',['any32x4_t',['../unionany32x4__t.html',1,'']]],
   ['arm_5fbilinear_5finterp_5finstance_5ff16',['arm_bilinear_interp_instance_f16',['../structarm__bilinear__interp__instance__f16.html',1,'']]],
   ['arm_5fbilinear_5finterp_5finstance_5ff32',['arm_bilinear_interp_instance_f32',['../structarm__bilinear__interp__instance__f32.html',1,'']]],
   ['arm_5fbilinear_5finterp_5finstance_5fq15',['arm_bilinear_interp_instance_q15',['../structarm__bilinear__interp__instance__q15.html',1,'']]],
@@ -36,6 +38,7 @@ var searchData=
   ['arm_5ffir_5fdecimate_5finstance_5fq31',['arm_fir_decimate_instance_q31',['../structarm__fir__decimate__instance__q31.html',1,'']]],
   ['arm_5ffir_5finstance_5ff16',['arm_fir_instance_f16',['../structarm__fir__instance__f16.html',1,'']]],
   ['arm_5ffir_5finstance_5ff32',['arm_fir_instance_f32',['../structarm__fir__instance__f32.html',1,'']]],
+  ['arm_5ffir_5finstance_5ff64',['arm_fir_instance_f64',['../structarm__fir__instance__f64.html',1,'']]],
   ['arm_5ffir_5finstance_5fq15',['arm_fir_instance_q15',['../structarm__fir__instance__q15.html',1,'']]],
   ['arm_5ffir_5finstance_5fq31',['arm_fir_instance_q31',['../structarm__fir__instance__q31.html',1,'']]],
   ['arm_5ffir_5finstance_5fq7',['arm_fir_instance_q7',['../structarm__fir__instance__q7.html',1,'']]],
@@ -69,6 +72,10 @@ var searchData=
   ['arm_5fmatrix_5finstance_5fq31',['arm_matrix_instance_q31',['../structarm__matrix__instance__q31.html',1,'']]],
   ['arm_5fmatrix_5finstance_5fq7',['arm_matrix_instance_q7',['../structarm__matrix__instance__q7.html',1,'']]],
   ['arm_5fmerge_5fsort_5finstance_5ff32',['arm_merge_sort_instance_f32',['../structarm__merge__sort__instance__f32.html',1,'']]],
+  ['arm_5fmfcc_5finstance_5ff16',['arm_mfcc_instance_f16',['../structarm__mfcc__instance__f16.html',1,'']]],
+  ['arm_5fmfcc_5finstance_5ff32',['arm_mfcc_instance_f32',['../structarm__mfcc__instance__f32.html',1,'']]],
+  ['arm_5fmfcc_5finstance_5fq15',['arm_mfcc_instance_q15',['../structarm__mfcc__instance__q15.html',1,'']]],
+  ['arm_5fmfcc_5finstance_5fq31',['arm_mfcc_instance_q31',['../structarm__mfcc__instance__q31.html',1,'']]],
   ['arm_5fpid_5finstance_5ff32',['arm_pid_instance_f32',['../structarm__pid__instance__f32.html',1,'']]],
   ['arm_5fpid_5finstance_5fq15',['arm_pid_instance_q15',['../structarm__pid__instance__q15.html',1,'']]],
   ['arm_5fpid_5finstance_5fq31',['arm_pid_instance_q31',['../structarm__pid__instance__q31.html',1,'']]],

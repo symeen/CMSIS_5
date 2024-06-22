@@ -33,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-DAP
-   &#160;<span id="projectnumber">Version 2.1.0-alpha-spec</span>
+   &#160;<span id="projectnumber">Version 2.1.2</span>
    </div>
    <div id="projectbrief">Interface Firmware for CoreSight Debug Access Port</div>
   </td>
@@ -109,42 +109,44 @@ $(document).ready(function(){initNavTree('group__DAP__UART__Transfer.html','');}
 
 <div class="header">
   <div class="headertitle">
-<div class="title">DAP_UART_Transfer<div class="ingroups"><a class="el" href="group__DAP__uart__gr.html">UART Commands</a></div></div>  </div>
+<div class="title">DAP_UART_Transfer<div class="ingroups"><a class="el" href="group__DAP__uart__gr.html">UART COM Commands</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Write (output) and Read (input) data via target UART interface.  
+<p>Transfer data via UART.  
 <a href="#details">More...</a></p>
-<p>Write (output) and Read (input) data via target UART interface. </p>
+<p>Transfer data via UART. </p>
 <h2>DAP_UART_Transfer (0x21): </h2>
-<p>Exchange data via the UART interface.</p>
+<p>Receive and Transmit data via target UART (only for transport via DAP).</p>
 <p><b>DAP_UART_Transfer Request:</b></p>
-<div class="fragment"><div class="line">| BYTE | SHORT   | BYTE          |</div>
-<div class="line">&gt; 0x21 | Request | Transmit data |</div>
-<div class="line">|******|*********|+++++++++++++++|</div>
+<div class="fragment"><div class="line">| BYTE | SHORT    | SHORT   | BYTE          |</div>
+<div class="line">&gt; 0x21 | Rx Count | Tx Count| Transmit data |</div>
+<div class="line">|******|**********|*********|+++++++++++++++|</div>
 </div><!-- fragment --><ul>
-<li><b>Request</b>: Number of bytes to send to the target device via UART.<ul>
-<li>Bit 9..0: Length: Number of bytes in <b>Transmit data</b>.</li>
-<li>Bit 15..10: reserved (0)</li>
+<li><b>Rx Count</b>: Maximum number of bytes to be read from UART receive buffer.</li>
+<li><b>Tx Count</b>: Number of bytes in <b>Transmit data</b> to be transmitted.</li>
 </ul>
-</li>
-<li><b>Transmit data</b>: Bytes to send to the target device via UART.</li>
-</ul>
+<dl class="section note"><dt>Note</dt><dd><a class="el" href="group__DAP__UART__Transfer.html">DAP_UART_Transfer</a> command can be used only if transport via DAP is enabled.<br/>
+ </dd>
+<dd>
+If only receive is required, Tx Count can be 0.<br/>
+ If only transmit is required, Rx Count can be 0.</dd></dl>
 <p><b>DAP_UART_Transfer Response:</b></p>
-<div class="fragment"><div class="line">| BYTE | SHORT    | BYTE          |</div>
-<div class="line">&lt; 0x21 | Response | Receive data  |</div>
-<div class="line">|******|**********|+++++++++++++++|</div>
+<div class="fragment"><div class="line">| BYTE | BYTE   | SHORT    | SHORT    | BYTE          |</div>
+<div class="line">&lt; 0x21 | Status | Tx Count | Rx Count | Receive data  |</div>
+<div class="line">|******|********|**********|**********|+++++++++++++++|</div>
 </div><!-- fragment --><ul>
-<li><b>Response</b>: Number of bytes received from the target device via UART and response status.<ul>
-<li>Bit 9..0: Length: Number of bytes in <b>Receive data</b>.</li>
-<li>Bit 10: reserved (0)</li>
-<li>Bit 11: 1 = UART transmitter busy. Next transmit can be started when this bit is cleared.</li>
-<li>Bit 12: 1 = Data lost during transmit operation. Transmit was started when UART transmitter was busy. Automatically cleared on next successful transmit operation.</li>
-<li>Bit 13: 1 = Data lost during receive operation. Automatically cleared on next successful receive operation.</li>
-<li>Bit 14: 1 = Framing error detected during receive. Automatically cleared on next successful receive operation.</li>
-<li>Bit 15: 1 = Parity error detected during receive. Automatically cleared on next successful receive operation.</li>
+<li><b>Status</b>:<ul>
+<li>Bit 0: 1 = Receive enabled, 0 = Receive disabled</li>
+<li>Bit 1: 1 = Data lost detected during receive (automatically cleared)</li>
+<li>Bit 2: 1 = Framing error detected (automatically cleared)</li>
+<li>Bit 3: 1 = Parity error detected (automatically cleared)</li>
+<li>Bit 4: 1 = Transmit enabled, 0 = Transmit disabled</li>
+<li>Bit 7..5: reserved (0)</li>
 </ul>
 </li>
+<li><b>Tx Count</b>: Number of bytes accepted from <b>Transmit data</b> and queued to UART transmit buffer.</li>
+<li><b>Rx Count</b>: Number of bytes in <b>Receive data</b> read from UART receive buffer.</li>
 <li><b>Receive data</b>: Bytes received from the target device via UART. </li>
 </ul>
 </div><!-- contents -->

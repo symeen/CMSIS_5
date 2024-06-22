@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['index_5fmask',['INDEX_MASK',['../utils_8h.html#a29f839928f4752b73c8858d6dbb55294',1,'utils.h']]],
-  ['input_5fspacing',['INPUT_SPACING',['../controller__functions_8h.html#a1339e9abc11a3870e0c04f822a62166a',1,'controller_functions.h']]]
+  ['groupofrows',['GROUPOFROWS',['../arm__mat__mult__f32_8c.html#a0dff45762fce58a802e32eea4c5afb62',1,'arm_mat_mult_f32.c']]]
 ];

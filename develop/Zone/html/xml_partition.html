@@ -33,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-Zone
-   &#160;<span id="projectnumber">Version 1.1.0</span>
+   &#160;<span id="projectnumber">Version 1.2.0-alpha</span>
    </div>
    <div id="projectbrief">System Resource Management</div>
   </td>
@@ -168,6 +168,8 @@ $(document).ready(function(){initNavTree('xml_partition.html','');});
 <td>dma </td><td>"1" specifies that this region is accessed by a DMA controller. Default value is "0". </td><td>xs:boolean </td><td>optional  </td></tr>
 <tr>
 <td>info </td><td>Brief description of the memory block. </td><td>xs:string </td><td>optional  </td></tr>
+<tr>
+<td>linker_control </td><td>Linker control settings for the memory region. </td><td>xs:string </td><td>optional  </td></tr>
 </table>
 <h1><a class="anchor" id="xml_aperipheral"></a>
 /azone/partition/peripheral element</h1>
